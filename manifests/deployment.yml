@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: emblancopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: emblancopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: emblancopipelinesjavascriptdocker 
+          image: eddycontainerregistryv1.azurecr.io/emblancopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
